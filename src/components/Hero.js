@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Time from "./Time";
 
 const Hero = ({ title }) => {
   return (
@@ -9,12 +10,27 @@ const Hero = ({ title }) => {
         <br />
         bets from our community & friends.
       </p>
+      <Time />
+      <div className="section-hero_form">
+        <form>
+          <input
+            type="email"
+            placeholder="Your email..."
+            className="section-hero_form_email"
+          />
+        </form>
+        <div className="page-header_info">
+          <a href="/" className="page-header_signup">
+            Sign up
+          </a>
+        </div>
+      </div>
     </section>
   );
 };
 
 Hero.defaultProps = {
-  title: `We are Launching in`,
+  title: `We are launching in`,
 };
 
 Hero.propTypes = {

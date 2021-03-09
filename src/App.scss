@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+//
 $color_body: #254b2f;
 $bg_body: #fff;
 $header_color: #254b2f;
 $btn_bg: #21b34f;
+$input_border: #21b34f;
+$font_color: #254b2f;
 
 *,
 ::after,
@@ -13,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 15px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   overflow: hidden;
   background: $bg_body;
@@ -21,6 +26,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 // Header
@@ -61,7 +71,7 @@ a {
         background: $btn_bg;
         color: #fff;
         font-size: 17px;
-        padding: 10px 25px;
+        padding: 10px 30px;
         border-radius: 6px;
         background-image: linear-gradient(-180deg, #18bc51 0%, #3b974c 100%);
         box-shadow: 0 1rem 1.25rem 0 rgba(22, 195, 65, 0.123);
@@ -72,13 +82,19 @@ a {
     svg {
       position: absolute;
       transform: rotate(170deg);
-      bottom: -16%;
+      bottom: -12%;
       width: 100%;
-      right: 33%;
-      z-index: -333;
-      path {
-        // fill: none;
-      }
+      right: 32%;
+      z-index: -9999;
+    }
+  }
+  .page-header_wave {
+    svg {
+      transform: rotate(90deg);
+      position: absolute;
+      top: 165px;
+      right: -64%;
+      z-index: -9999;
     }
   }
 }
@@ -87,7 +103,7 @@ a {
 
 .section-hero {
   height: 100%;
-  padding-top: 7rem;
+  padding-top: 2rem;
   padding-left: 14rem;
 
   .section-hero_title {
@@ -99,5 +115,58 @@ a {
     font-size: 21px;
     line-height: 35px;
     font-weight: 100;
+  }
+
+  .section-hero_time {
+    margin-top: 45px;
+    ul {
+      display: flex;
+
+      li {
+        font-size: 70px;
+        font-weight: 900;
+        background-color: #fff;
+        padding: 20px 50px;
+        border-radius: 10px;
+        margin-right: 25px;
+        box-shadow: 0 4px 70px 0 rgba(0, 0, 0, 0.233);
+        text-align: center;
+
+        .time_title {
+          display: block;
+          font-size: 18px;
+          font-weight: 100;
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+  .section-hero_form {
+    display: flex;
+    margin-top: 85px;
+
+    .section-hero_form_email {
+      width: 25rem;
+      padding: 12px;
+      border: 2px solid $input_border;
+      border-radius: 8px;
+      color: $font_color;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .page-header_info {
+      margin-top: 11px;
+      margin-left: 50px;
+      .page-header_signup {
+        background: $btn_bg;
+        color: #fff;
+        font-size: 17px;
+        padding: 10px 30px;
+        border-radius: 6px;
+        background-image: linear-gradient(-180deg, #18bc51 0%, #3b974c 100%);
+        box-shadow: 0 1rem 1.25rem 0 rgba(22, 195, 65, 0.123);
+      }
+    }
   }
 }

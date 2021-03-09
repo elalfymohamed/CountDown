@@ -1,5 +1,5 @@
-import Circle from "../assets/circle";
-import Wave from "../assets/wave";
+import Circle from "../constants/circle";
+import Wave from "../constants/wave";
 
 const Header = () => {
   return (
@@ -18,7 +18,9 @@ const Header = () => {
       <div className="page-header_circle">
         <Circle />
       </div>
-      <div className="page-header_cave">{/* <Wave /> */}</div>
+      <div className="page-header_wave">
+        <Wave />
+      </div>
     </header>
   );
 };
